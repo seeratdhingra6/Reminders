@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To Do</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main id="wholeSection">
+      <header id="header">
+        <span class="title">To Do</span>
+      </header>
+      <div id="todoWrapper">
+        <aside id="sideNavBarWrapper">
+            <button onclick="navBarLauncher()" class="navBarLauncher">
+              <img src="./assets/hamburger.svg" />
+            </button>
+            <ul id="asidenavBarListing">
+              <li>
+                <img src="./assets/sun.svg" />
+                <span class="item1">My Day</span>
+              </li>
+              <li>
+                <img src="./assets/star.svg" />
+                <span class="item2">Important</span>
+              </li>
+            </ul>
+        </aside>
+        <section id="mainContentSection">
+          <div id="tasksToolbar">
+            <div id="tasksToolbar-TitleContainer">
+              <img src="./assets/sun.svg" />
+              <span>My Day</span>
+            </div>
+            <div id="tasksToolbar-subline">
+              <div id="currentTime">
+                <div class="day">thursday,</div>
+                <div class="month">june</div>
+                <div class="date">22</div>
+              </div>
+            </div>
+          </div>
+          <div id="flex-container">
+            <input type="text" />
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh; 
+    background-color: #faf9f8;
+    overflow-x: hidden; 
+}
+#wholeSection{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/***** Header Starts here **********/
+#header{
+    background-color: rgb(37,100,207);
+    height: 48px;
+}
+
+.title{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Mukta', sans-serif;
+}
+
+/***** Header Ends here **********/
+
+
+/**** Todo Wrapper starts here *********/
+#todoWrapper {
+    display: flex;
+    border: 1px solid red;
+    flex: 1;
+}
+
+/****** Sidebar starts here ******/
+#sideNavBarWrapper{
+    width: 290px;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.navBarLauncher{
+    margin-left: 20px;
+    width:fit-content;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin-top: 34px;
+}
+
+#asidenavBarListing{
+    list-style: none;
+    padding:0 ;
+    flex: 1;
+}
+
+#asidenavBarListing li{
+     padding-left: 26px;
+     display: flex;
+     align-items: center;
+     height: 40px;
+     width: auto;
+     
+}
+#asidenavBarListing li:nth-child(1n):hover{
+height: 40px;
+background-color: #eff6fc;
+}
+.item1{
+   margin-left: 17px;
+}
+.item2{
+    margin-left: 17px; 
+}
+#tasksToolbar-TitleContainer{
+    border: 1px solid red;
+}
+#mainContentSection{
+    height: auto;
+     /* position: relative;  */
+    /* justify-content: center; */
+    /* align-items: center;  */
+    
+}
+#tasksToolbar{
+  /* position: absolute; / */
+  /* top:0; */
+  border: 1px solid red;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.root {
+    
+display: flex;
+    flex-direction: column;}
+
+.rotodoWrapper {
+    display: flex;
+}
