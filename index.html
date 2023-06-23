@@ -19,6 +19,7 @@
         <span class="title">To Do</span>
       </header>
       <div id="todoWrapper">
+        <!-- asidebar -->
         <aside id="sideNavBarWrapper">
             <button onclick="navBarLauncher()" class="navBarLauncher">
               <img src="./assets/hamburger.svg" />
@@ -34,30 +35,22 @@
               </li>
             </ul>
         </aside>
-        <section id="mainContent">
+        <section id="mainContentSection">
           <div id="tasksToolbar">
             <div id="tasksToolbar-TitleContainer">
-              <img class="sun" src="./assets/sun.svg" />
-              <span class="titlebar">My Day</span>
+              <img src="./assets/sun.svg" />
+              <span>My Day</span>
             </div>
+            <div id="tasksToolbar-subline">
               <div id="currentTime">
-                <div class="day">Thursday,</div>
-                <div class="month">June</div>
+                <div class="day">thursday,</div>
+                <div class="month">june</div>
                 <div class="date">22</div>
               </div>
+            </div>
           </div>
           <div id="flex-container">
-          <div class="flex-wrapper">
-              <button class="bulletButton">
-            <img src="./assets/button.svg"/></button>
-            <input class="textField" type="text" placeholder="Add A Task " autofocus/>
-          </div>
-          <div id="toDoArea">
-            <ul id="toDoListing">
-              <li class="toDoItems"> <button class="bulletButton">
-                <img src="./assets/button.svg"/></button>hi</li>
-            
-          </div>
+            <input type="text" />
           </div>
         </section>
       </div>
