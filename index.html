@@ -23,14 +23,20 @@
             <button onclick="navBarLauncher()" class="navBarLauncher">
               <img src="./assets/hamburger.svg" />
             </button>
-            <ul id="asidenavBarListing">
+            <ul id="sidenavBarLinks">
               <li>
                 <img src="./assets/sun.svg" />
-                <span class="item1">My Day</span>
+                <div class="navItem">
+                  <span>My Day</span>
+                  <span class="numberOfTasks">1</span>
+                </div>
               </li>
               <li>
                 <img src="./assets/star.svg" />
-                <span class="item2">Important</span>
+                <div class="navItem">
+                <span>Important</span>
+                <span class="numberOfTasks">1</span>
+                </div>
               </li>
             </ul>
         </aside>
@@ -47,17 +53,22 @@
               </div>
           </div>
           <div id="flex-container">
-          <div class="flex-wrapper">
+          <div class="flexWrapper">
               <button class="bulletButton">
-            <img src="./assets/button.svg"/></button>
+            <img src="assets/add.svg"></button>
             <input class="textField" type="text" placeholder="Add A Task " autofocus/>
+            <button onclick="Add()" class="addToDo">Add</button>
           </div>
-          <div id="toDoArea">
             <ul id="toDoListing">
-              <li class="toDoItems"> <button class="bulletButton">
-                <img src="./assets/button.svg"/></button>hi</li>
-            
-          </div>
+              <li class="toDoItems">
+                <input type="checkbox" class="checkbox"/> 
+                <span class="toDoValue">Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+                <div id="titleFunction">
+                  <button onclick="addToFavourites()" class="addToFavourites"><img src="assets/star.svg"/></button>
+                  <button onclick="removeToDo()" class="removeToDo"><img src="./assets/trash.svg"></button>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
       </div>
