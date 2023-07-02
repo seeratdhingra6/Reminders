@@ -71,15 +71,14 @@ body {
   height: 20px;
   width: auto;
   gap: 16px;
+  background-color: #eff6fc;
 }
 .navItem{
   display:flex;
   justify-content: space-between;
   flex: 1;
 }
-#sidenavBarLinks li:hover {
-  height: 20px;
-  background-color: #eff6fc;
+#sidenavBarLinks li:focus-visible{
   cursor: pointer;
 }
 
@@ -114,6 +113,7 @@ body {
   color: #878b88;
   gap: 2px;
   padding-left: 8px;
+  text-transform: capitalize;
 }
 #flex-container {
   width: 100%;
@@ -126,6 +126,8 @@ body {
   align-items: center;
   padding: 0px 16px;
   flex: 1;
+  border-radius: 12px;
+  
 }
 .bulletButton {
   background-color: transparent;
@@ -149,13 +151,19 @@ width: 38px;
 border: 1px solid #e5e3e1;
 color:#a3a0ad;
 }
+.addToDo:hover{
+  color:#215aba;
+  cursor: pointer;
+  
+}
 .textField:hover {
   outline: none;
 }
 #toDoListing {
   list-style: none;
-  padding: 0px 16px;
-  background-color: white;
+  padding: 0;
+  /* padding: 0px 16px; */
+  /* background-color: white; */
 }
 .toDoItems {
   height: auto;
@@ -163,6 +171,9 @@ color:#a3a0ad;
   min-height: 52px;
   align-items: center;
   width: auto;
+  margin-bottom: 16px;
+  background-color: white;
+  padding: 0px 16px;
 
 }
 input[type="checkbox"]{
@@ -184,15 +195,12 @@ input[type="checkbox"]{
 #titleFunction{
   display: flex;
   align-items: center;
-  width: 60px;
+  width: 35px;
   /* justify-content: flex-end; */
 }
-#toDoListing:hover {
+.toDoItems:hover {
   background-color: #eff6fc;
-}
-.addToFavourites{
-  background-color: transparent;
-  border: none;
+  cursor: pointer;
 }
 .removeToDo{
   background-color: transparent;
@@ -202,6 +210,12 @@ input[type="checkbox"]{
 .removeToDo:hover{
   cursor: pointer;
 }
-.addToFavourites:hover{
-  cursor: pointer;
+
+.lowMobileDevice{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #sideNavBarWrapper {
+    display: none;
+  }
 }
