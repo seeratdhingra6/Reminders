@@ -23,14 +23,13 @@
             <button onclick="navBarLauncher()" class="navBarLauncher">
               <img src="./assets/hamburger.svg" />
             </button>
-            <ul id="asidenavBarListing">
+            <ul id="sidenavBarLinks">
               <li>
                 <img src="./assets/sun.svg" />
-                <span class="item1">My Day</span>
-              </li>
-              <li>
-                <img src="./assets/star.svg" />
-                <span class="item2">Important</span>
+                <div class="navItem">
+                  <span>My Day</span>
+                  <span class="numberOfTasks"></span>
+                </div>
               </li>
             </ul>
         </aside>
@@ -47,21 +46,18 @@
               </div>
           </div>
           <div id="flex-container">
-          <div class="flex-wrapper">
+          <div class="flexWrapper">
               <button class="bulletButton">
-            <img src="./assets/button.svg"/></button>
+            <img src="assets/add.svg"></button>
             <input class="textField" type="text" placeholder="Add A Task " autofocus/>
+            <button onclick="AddToDo()" class="addToDo">Add</button>
           </div>
-          <div id="toDoArea">
             <ul id="toDoListing">
-              <li class="toDoItems"> <button class="bulletButton">
-                <img src="./assets/button.svg"/></button>hi</li>
-            
-          </div>
+            </ul>
           </div>
         </section>
       </div>
     </main>
-    <script src="index.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

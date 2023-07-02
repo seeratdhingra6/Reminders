@@ -10,18 +10,23 @@ body {
 #wholeSection {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
 }
 
 /***** Header Starts here **********/
 #header {
   background-color: rgb(37, 100, 207);
   height: 48px;
+  display: flex;
+  align-items: center;
+  width: 100vw;
 }
 
 .title {
   font-size: 17px;
   font-weight: 500;
+  color: white;
+  margin-left: 46px;
 }
 
 /***** Header Ends here **********/
@@ -42,43 +47,52 @@ body {
 }
 
 .navBarLauncher {
-  margin-left: 20px;
-  width: fit-content;
-  background-color: rgb(255, 255, 255);
+  margin-top: 16px;
+  padding: 0px 24px;
+  background-color: transparent;
   border: none;
-  margin-top: 34px;
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#asidenavBarListing {
+#sidenavBarLinks {
   list-style: none;
-  padding: 0;
   flex: 1;
+  margin: 0;
+  padding: 0;
 }
 
-#asidenavBarListing li {
-  padding-left: 26px;
+#sidenavBarLinks li {
+  padding: 12px 24px;
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 20px;
   width: auto;
-}
-#asidenavBarListing li:nth-child(1n):hover {
-  height: 40px;
+  gap: 16px;
   background-color: #eff6fc;
 }
-.item1 {
-  margin-left: 17px;
+.navItem{
+  display:flex;
+  justify-content: space-between;
+  flex: 1;
 }
-.item2 {
-  margin-left: 17px;
+#sidenavBarLinks li:focus-visible{
+  cursor: pointer;
 }
+
+/****** Sidebar ends here ******/
+
 #mainContent {
   padding: 16px 24px;
+  flex: 1;
 }
 #tasksToolbar {
   display: flex;
   flex-direction: column;
 }
+
 #tasksToolbar-TitleContainer {
   padding: 6px 8px 3px;
   display: flex;
@@ -89,8 +103,8 @@ body {
   transform: scale(1.3);
 }
 .titlebar {
-  font-size: 20px;
-  font-weight: 600px;
+  font-size: 23px;
+  font-weight: 500;
   color: #292827;
 }
 #currentTime {
@@ -99,39 +113,109 @@ body {
   color: #878b88;
   gap: 2px;
   padding-left: 8px;
+  text-transform: capitalize;
 }
-.flex-wrapper {
+#flex-container {
+  width: 100%;
+}
+.flexWrapper {
   display: flex;
   background-color: white;
-  height: 45px;
+  height: 52px;
   margin-top: 28px;
+  align-items: center;
+  padding: 0px 16px;
+  flex: 1;
+  border-radius: 12px;
+  
 }
 .bulletButton {
-  background-color: white;
+  background-color: transparent;
   border: none;
   color: #706fd4;
 }
 .textField {
   border: none;
-  width: 1161px;
-  color: #706fd4;
+  color: #215aba;
   outline: none;
+  padding-left: 14px;
+  flex: 1;
+}
+.textField::placeholder{
+  color: #215aba;
+}
+.addToDo{
+background-color: white;
+height: 30px;
+width: 38px;
+border: 1px solid #e5e3e1;
+color:#a3a0ad;
+}
+.addToDo:hover{
+  color:#215aba;
+  cursor: pointer;
+  
 }
 .textField:hover {
   outline: none;
 }
 #toDoListing {
-  border: 1px solid red;
   list-style: none;
   padding: 0;
+  /* padding: 0px 16px; */
+  /* background-color: white; */
 }
 .toDoItems {
-  border: 1px solid red;
-  background-color: white;
   height: auto;
   display: flex;
   min-height: 52px;
+  align-items: center;
+  width: auto;
+  margin-bottom: 16px;
+  background-color: white;
+  padding: 0px 16px;
+
+}
+input[type="checkbox"]{
+  display: flex;
+  align-items: center;
+  /* width: 25px; */
+  border-radius: 3px;
+  border: 1px solid#215aba;
+  outline: none;
+  /* color: #215aba; */
+  /* border:1px solid #215aba; */
+}
+.toDoValue{
+ flex: 1;
+ padding: 8px 16px;
+ color:#292827;
+ font-weight: 300;
+}
+#titleFunction{
+  display: flex;
+  align-items: center;
+  width: 35px;
+  /* justify-content: flex-end; */
 }
 .toDoItems:hover {
   background-color: #eff6fc;
+  cursor: pointer;
+}
+.removeToDo{
+  background-color: transparent;
+  border: none;
+  
+}
+.removeToDo:hover{
+  cursor: pointer;
+}
+
+.lowMobileDevice{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #sideNavBarWrapper {
+    display: none;
+  }
 }
